@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* 🌿 Custom theme (punya kamu) */
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+
+  --color-base-100: oklch(98% 0.018 155.826);
+  --color-base-200: oklch(96% 0.044 156.743);
+  --color-base-300: oklch(92% 0.084 155.995);
+  --color-base-content: oklch(39% 0.095 152.535);
+
+  --color-primary: oklch(0% 0 0);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(83% 0.145 321.434);
+  --color-secondary-content: oklch(29% 0.136 325.661);
+
+  --color-accent: oklch(0% 0 0);
+  --color-accent-content: oklch(100% 0 0);
+
+  --color-neutral: oklch(44% 0.119 151.328);
+  --color-neutral-content: oklch(98% 0.018 155.826);
+
+  --color-info: oklch(58% 0.158 241.966);
+  --color-info-content: oklch(97% 0.013 236.62);
+  --color-success: oklch(64% 0.2 131.684);
+  --color-success-content: oklch(98% 0.031 120.757);
+  --color-warning: oklch(66% 0.179 58.318);
+  --color-warning-content: oklch(98% 0.022 95.277);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0.013 17.38);
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
+/* Tambahin font global biar enak dilihat */
+body {
+  @apply font-sans bg-base-100 text-base-content;
+}
+
+
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease-out;
+}
