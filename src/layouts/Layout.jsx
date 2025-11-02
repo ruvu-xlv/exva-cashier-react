@@ -3,16 +3,17 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
-    return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-green-50 via-green-100 to-green-200">
-            <NavBar />
+  return (
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-green-300 via-green-200 to-green-100">
+      <NavBar />
 
-            {/* konten langsung tanpa card */}
-            <main className="flex-grow pt-20 px-4 sm:px-6 lg:px-8">
-                <Outlet />
-            </main>
+      {/* Konten utama */}
+      <main className="flex-grow pt-23 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <Outlet />
+      </main>
 
-            <Footer />
-        </div>
-    );
+      {/* Footer opsional */}
+      {/* <Footer /> */}
+    </div>
+  );
 }
